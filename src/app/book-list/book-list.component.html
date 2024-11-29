@@ -2,7 +2,7 @@
 <div *ngFor="let book of books$ | async">
   <h2>{{ book.title }}</h2>
   <h2>{{ book.author }}</h2>
-  <button (click)="removeBook(book.id)">Delete</button>
+  <button (click)="removeBook(book.id)">Remove Book</button>
 </div>
 
 <h2>Create a new book</h2>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { AddBook, RemoveBook } from '../books/books.actions';
+import { AddBook, RemoveBook } from '../books/book.actions';
 import { Book } from '../models/book';
 import { AppState } from '../app.state';
 

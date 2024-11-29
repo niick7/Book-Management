@@ -3,6 +3,7 @@ import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { AddBook, RemoveBook } from '../books/books.actions';
 import { Book } from '../models/book';
+import { AppState } from '../app.state';
 
 @Component({
   selector: 'app-book-list',
@@ -11,8 +12,8 @@ import { Book } from '../models/book';
 })
 export class BookListComponent {
   books$: Observable<Book[]>;
-  constructor(private store: Store<{ books: Book[] }>) {
-    this.books$ = store.pipe(select('books'));
+  constructor(private store: Store<AppState>) {
+    this.books$ = store.pipe(select('book'));
   }
 
   addBook(id: string, title: string, author: string) {
